@@ -1,5 +1,9 @@
 ﻿namespace TheMoneyExample
 {
+    /// <summary>
+    /// Value Object パターン
+    /// コンストラクタで設定したインスタンス変数の値が変わってはならない
+    /// </summary>
     public class Dollar
     {
         public int amount;
