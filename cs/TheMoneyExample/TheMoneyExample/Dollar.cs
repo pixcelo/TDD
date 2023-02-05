@@ -11,7 +11,7 @@
 
         public void Times(int multiplier)
         {
-
+            amount = 5 * 2;
         }
     }
 }
