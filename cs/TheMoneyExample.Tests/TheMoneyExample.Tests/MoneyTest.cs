@@ -1,3 +1,5 @@
+using System;
+
 namespace TheMoneyExample.Tests
 {
     public class MoneyTest
@@ -16,6 +18,13 @@ namespace TheMoneyExample.Tests
             Assert.True(new Dollar(5).Equals(new Dollar(5)));
             Assert.False(new Dollar(5).Equals(new Dollar(6)));
             Assert.Equal(new Dollar(5), new Dollar(5));
+        }
+
+        public void TestFrancMultiplication()
+        {
+            Franc five = new Franc(5);
+            Assert.Equivalent(new Franc(10), five.Times(2));
+            Assert.Equivalent(new Franc(15), five.Times(3));
         }
     }
 }
