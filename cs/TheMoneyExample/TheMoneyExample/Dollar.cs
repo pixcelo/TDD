@@ -6,8 +6,6 @@
     /// </summary>
     public class Dollar : Money
     {
-        private readonly int amount;
-
         public Dollar(int amount)
         {
             this.amount = amount;
