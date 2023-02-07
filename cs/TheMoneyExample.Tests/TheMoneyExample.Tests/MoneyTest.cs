@@ -20,6 +20,7 @@ namespace TheMoneyExample.Tests
             Assert.Equal(new Dollar(5), new Dollar(5));
         }
 
+        [Fact]
         public void TestFrancMultiplication()
         {
             Franc five = new Franc(5);
