@@ -4,7 +4,7 @@
     /// Value Object パターン
     /// コンストラクタで設定したインスタンス変数の値が変わってはならない
     /// </summary>
-    public class Dollar
+    public class Dollar : Money
     {
         private readonly int amount;
 
