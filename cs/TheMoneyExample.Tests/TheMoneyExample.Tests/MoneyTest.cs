@@ -26,9 +26,9 @@ namespace TheMoneyExample.Tests
         [Fact]
         public void TestFrancMultiplication()
         {
-            Franc five = new Franc(5);
-            Assert.Equivalent(new Franc(10), five.Times(2));
-            Assert.Equivalent(new Franc(15), five.Times(3));
+            Money five = Money.Franc(5);
+            Assert.Equivalent(Money.Franc(10), five.Times(2));
+            Assert.Equivalent(Money.Franc(15), five.Times(3));
         }
 
         [Fact]
