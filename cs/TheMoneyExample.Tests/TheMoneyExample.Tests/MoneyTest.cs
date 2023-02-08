@@ -18,9 +18,9 @@ namespace TheMoneyExample.Tests
             Assert.True(Money.Dollar(5).Equals(Money.Dollar(5)));
             Assert.False(Money.Dollar(5).Equals(Money.Dollar(6)));
             Assert.Equal(Money.Dollar(5), Money.Dollar(5));
-            Assert.True(new Franc(5).Equals(new Franc(5)));
-            Assert.False(new Franc(5).Equals(new Franc(6)));
-            Assert.False(new Franc(5).Equals(new Dollar(5)));
+            Assert.True(Money.Franc(5).Equals(Money.Franc(5)));
+            Assert.False(Money.Franc(5).Equals(Money.Franc(6)));
+            Assert.False(Money.Franc(5).Equals(Money.Dollar(5)));
         }
 
         [Fact]
