@@ -4,6 +4,7 @@
     {
         protected int amount;
         public abstract Money Times(int multiplier);
+        public abstract string Currency();
 
         public override bool Equals(object obj)
         {

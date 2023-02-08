@@ -30,5 +30,12 @@ namespace TheMoneyExample.Tests
             Assert.Equivalent(new Franc(10), five.Times(2));
             Assert.Equivalent(new Franc(15), five.Times(3));
         }
+
+        [Fact]
+        public void TestCurrency()
+        {
+            Assert.Equal("USD", Money.Dollar(1).Currency());
+            Assert.Equal("CHF", Money.Franc(1).Currency());
+        }
     }
 }
