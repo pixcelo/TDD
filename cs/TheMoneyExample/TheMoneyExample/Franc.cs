@@ -1,15 +1,18 @@
 ﻿namespace TheMoneyExample
 {
     public class Franc : Money
-    {        
+    {
+        private readonly string currency;
+
         public Franc(int amount)
         {
             this.amount = amount;
+            currency = "CHF";
         }
 
         public override string Currency()
         {
-            return "CHF";
+            return currency;
         }
 
         public override Money Times(int multiplier)
