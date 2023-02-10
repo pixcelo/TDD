@@ -6,6 +6,12 @@
         protected string? currency;
         public abstract Money Times(int multiplier);
 
+        public Money(int amount, string currency)
+        {
+            this.amount = amount;
+            this.currency = currency;
+        }
+
         public string? Currency()
         {
             return currency;

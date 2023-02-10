@@ -6,15 +6,15 @@
     /// </summary>
     public class Dollar : Money
     {
-        public Dollar(int amount, string currency)
+        public Dollar(int amount, string currency) : base(amount, currency)
         {
-            this.amount = amount;
-            this.currency = currency;
+            base.amount = amount;
+            base.currency = currency;
         }
 
         public override Money Times(int multiplier)
         {
-            return Money.Dollar(amount * multiplier);
+            return Money.Dollar(base.amount * multiplier);
         }
     }
 }
