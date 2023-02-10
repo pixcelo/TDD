@@ -2,8 +2,8 @@
 {
     public class Money : Expression
     {
-        protected int amount;
-        protected string? currency;
+        internal int amount;
+        internal string? currency;
 
         public Money(int amount, string currency)
         {
