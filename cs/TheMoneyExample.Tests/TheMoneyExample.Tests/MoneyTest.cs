@@ -29,8 +29,11 @@ namespace TheMoneyExample.Tests
         [Fact]
         public void TestSimpleAdditon()
         {
-            Money sum = Money.Dollar(5).Plus(Money.Dollar(5));
-            Assert.Equal(Money.Dollar(10), sum);
+            Money five = Money.Dollar(5);
+            Expression sum = five.Plus(five);
+            Bank bank = new Bank();
+            Money reduced = bank.Reduce(sum, "USD");
+            Assert.Equal(Money.Dollar(10), reduced);
         }
     }
 }

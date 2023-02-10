@@ -1,6 +1,6 @@
 ﻿namespace TheMoneyExample
 {
-    public class Money
+    public class Money : Expression
     {
         protected int amount;
         protected string? currency;
@@ -28,7 +28,7 @@
             return new Money(amount * multiplier, currency);
         }
 
-        public Money Plus(Money addend)
+        public Expression Plus(Money addend)
         {
             return new Money(amount + addend.amount, currency);
         }
