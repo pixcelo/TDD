@@ -35,5 +35,15 @@ namespace TheMoneyExample.Tests
             Money reduced = bank.Reduce(sum, "USD");
             Assert.Equal(Money.Dollar(10), reduced);
         }
+
+        [Fact]
+        public void TestPlusReturnsSum()
+        {
+            Money five = Money.Dollar(5);
+            Expression result = five.Plus(five);
+            Sum sum = (Sum)result;
+            Assert.Equal(five, sum.augend);
+            Assert.Equal(five, sum.addend);
+        }
     }
 }
