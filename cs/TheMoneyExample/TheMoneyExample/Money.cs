@@ -1,10 +1,9 @@
 ﻿namespace TheMoneyExample
 {
-    public abstract class Money
+    public class Money
     {
         protected int amount;
         protected string? currency;
-        public abstract Money Times(int multiplier);
 
         public Money(int amount, string currency)
         {
@@ -21,7 +20,12 @@
         {
             Money money = (Money)obj;
             return amount == money.amount
-                   && this.GetType().Equals(obj.GetType());
+                   && Currency().Equals(money.Currency());
+        }
+
+        public Money Times(int multiplier)
+        {
+            return new Money(amount * multiplier, currency);
         }
 
         public static Money Dollar(int amount)

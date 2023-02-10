@@ -11,10 +11,5 @@
             base.amount = amount;
             base.currency = currency;
         }
-
-        public override Money Times(int multiplier)
-        {
-            return Money.Dollar(base.amount * multiplier);
-        }
     }
 }

@@ -7,10 +7,5 @@
             base.amount = amount;
             base.currency = currency;
         }
-
-        public override Money Times(int multiplier)
-        {
-            return Money.Franc(base.amount * multiplier);
-        }
     }
 }
