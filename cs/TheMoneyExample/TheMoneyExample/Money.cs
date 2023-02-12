@@ -11,6 +11,11 @@
             this.currency = currency;
         }
 
+        public Money Reduce(string to)
+        {
+            return this;
+        }
+
         public string? Currency()
         {
             return currency;
