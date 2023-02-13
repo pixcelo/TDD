@@ -11,9 +11,10 @@
             this.currency = currency;
         }
 
-        public Money Reduce(string to)
+        public Money Reduce(Bank bank, string to)
         {
-            return this;
+            int rate = bank.Rate(currency, to);
+            return new Money(amount / rate, to);
         }
 
         public string? Currency()
