@@ -16,7 +16,19 @@
 
         public int Rate(string from, string to)
         {
-            return rates[new Pair(from , to)];
+            if (from.Equals(to))
+            {
+                return 1;
+            }
+
+            int rate = 1;
+
+            if (rates.TryGetValue(new Pair(from, to), out rate))
+            {
+                return rate;
+            }
+
+            return rate;
         }
     }
 

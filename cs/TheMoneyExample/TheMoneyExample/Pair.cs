@@ -17,9 +17,9 @@
             return from.Equals(pair.from) && to.Equals(pair.to);
         }
 
-        public int HashCode()
+        public override int GetHashCode()
         {
-            return 0;
+            return Tuple.Create(from, to).GetHashCode();
         }
     }
 }
