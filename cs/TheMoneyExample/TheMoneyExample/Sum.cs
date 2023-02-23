@@ -11,6 +11,11 @@
             this.addend = addend;
         }
 
+        public Expression Times(int multiplier)
+        {
+            return new Sum(augend.Times(multiplier), addend.Times(multiplier));
+        }
+
         public Expression Plus(Expression augend)
         {
             return new Sum(this, addend);
