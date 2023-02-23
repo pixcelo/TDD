@@ -11,6 +11,11 @@
             this.addend = addend;
         }
 
+        public Expression Plus(Expression augend)
+        {
+            return null;
+        }
+
         public Money Reduce(Bank bank, string to)
         {
             int amount = augend.Reduce(bank, to).amount

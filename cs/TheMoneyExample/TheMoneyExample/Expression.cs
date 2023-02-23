@@ -2,6 +2,7 @@
 {
 	public interface Expression
 	{
-		Money Reduce(Bank bank, string to);
+        Expression Plus(Expression addend);
+        Money Reduce(Bank bank, string to);
 	}
 }
