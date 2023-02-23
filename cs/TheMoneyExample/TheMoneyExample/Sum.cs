@@ -13,7 +13,7 @@
 
         public Expression Plus(Expression augend)
         {
-            return null;
+            return new Sum(this, addend);
         }
 
         public Money Reduce(Bank bank, string to)
