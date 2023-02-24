@@ -112,5 +112,6 @@ namespace TheMoneyExample.Tests
             Money result = bank.Reduce(sum, "USD");
             Assert.Equal(Money.Dollar(20), result);
         }
+
     }
 }
